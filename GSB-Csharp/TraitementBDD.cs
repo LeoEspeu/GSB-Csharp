@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace GSB_Csharp
 {
-    class Program
+    class TraitementBDD
     {
-        static void Main(string[] args)
-        {
 
-        }
     }
 }

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace GSB_Csharp
 {
-    class Program
+    abstract class GestionDates
     {
-        static void Main(string[] args)
-        {
 
-        }
     }
 }
