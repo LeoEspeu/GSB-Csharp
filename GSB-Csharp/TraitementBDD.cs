@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GSB_Csharp
 {
-    class TraitementBDD
+    public class TraitementBDD
     {
 
     }
