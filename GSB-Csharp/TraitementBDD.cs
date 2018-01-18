@@ -19,17 +19,18 @@ namespace GSB_Csharp
         //Constructeur
         public TraitementBDD(string server, string database, string login, string password)
         {
-            try { 
-            this.server = server;
-            this.database = database;
-            this.login = login;
-            this.password = password;
+            try
+            {
+                this.server = server;
+                this.database = database;
+                this.login = login;
+                this.password = password;
 
-            //On fussionne toutes les Info et on met tout dans un string,parce que Oracle ne connait pas les tableaux
-            co = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + login + ";" + "PASSWORD=" + password + ";";
-            connection = new MySqlConnection(co);
-            
+                //On fussionne toutes les Info et on met tout dans un string,parce que Oracle ne connait pas les tableaux
+                co = "SERVER=" + server + ";" + "DATABASE=" +
+                database + ";" + "UID=" + login + ";" + "PASSWORD=" + password + ";";
+                connection = new MySqlConnection(co);
+
             }
             catch (MySqlException ex)
             {
@@ -48,11 +49,6 @@ namespace GSB_Csharp
                 cmd.CommandText = commande;
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-
-
-                
-
-                
                 return reader;
             }
 
@@ -60,7 +56,7 @@ namespace GSB_Csharp
             {
                 //en cas d'erreur:
                 //on ferme la connection
-                
+
                 Console.WriteLine("Une exception a été levée : " + err.Message);
                 //Si il y a un soucis les fonctions retourne NULL 
                 return null;
@@ -86,7 +82,7 @@ namespace GSB_Csharp
                 //en cas d'erreur:
                 //on ferme la connection
                 Console.WriteLine("Une exception a été levée : " + err.Message);
-                
+
             }
         }
 
